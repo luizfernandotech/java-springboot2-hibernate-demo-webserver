@@ -1,6 +1,6 @@
-# java11-webservice-springboot2-hibernate
+# java-springboot2-hibernate-demo-webserver
 
-Web service project with Spring Boot and JPA / Hibernate
+Web service project with Spring Boot 2 and JPA / Hibernate
 
 Objectives
 
