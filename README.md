@@ -13,4 +13,5 @@ Objectives
 - Exception handling
 
 Domain model
+
 <img src="https://github.com/luizfernandotech/java-springboot2-hibernate-demo-webserver/blob/master/src/main/resources/static/img/java-springboot2-hibernate-demo-webserver.png">
