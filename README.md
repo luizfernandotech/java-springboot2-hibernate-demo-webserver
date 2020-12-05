@@ -12,5 +12,8 @@ Objectives
 - CRUD - Create, retrieve, update, delete
 - Exception handling
 
-
 <img src="https://github.com/luizfernandotech/java-springboot2-hibernate-demo-webserver/blob/master/src/main/resources/static/img/java-springboot2-hibernate-demo-webserver.png">
+
+<img src="https://github.com/luizfernandotech/java-springboot2-hibernate-demo-webserver/blob/master/src/main/resources/static/img/java-springboot2-hibernate-demo-webserver-instances.png">
+
+<img src="https://github.com/luizfernandotech/java-springboot2-hibernate-demo-webserver/blob/master/src/main/resources/static/img/java-springboot2-hibernate-demo-webserver-layers.png">
