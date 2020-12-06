@@ -1,5 +1,7 @@
 package com.luizfernandotech.webservice.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -17,7 +19,8 @@ public class Category implements Serializable {
 
     private String name;
 
-    @Transient
+    @JsonIgnore
+    @ManyToMany(mappedBy = "categories")
     private Set<Product> products = new HashSet<>();
 
     public Category() {
@@ -46,10 +49,6 @@ public class Category implements Serializable {
 
     public Set<Product> getProducts() {
         return products;
-    }
-
-    public void addProduct(Product product) {
-        products.add(product);
     }
 
     @Override
