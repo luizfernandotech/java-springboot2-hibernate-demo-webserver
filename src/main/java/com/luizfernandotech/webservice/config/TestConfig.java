@@ -1,14 +1,8 @@
 package com.luizfernandotech.webservice.config;
 
-import com.luizfernandotech.webservice.entities.Category;
-import com.luizfernandotech.webservice.entities.Order;
-import com.luizfernandotech.webservice.entities.Product;
-import com.luizfernandotech.webservice.entities.User;
+import com.luizfernandotech.webservice.entities.*;
 import com.luizfernandotech.webservice.entities.enums.OrderStatus;
-import com.luizfernandotech.webservice.repositories.CategoryRepository;
-import com.luizfernandotech.webservice.repositories.OrderRepository;
-import com.luizfernandotech.webservice.repositories.ProductRepository;
-import com.luizfernandotech.webservice.repositories.UserRepository;
+import com.luizfernandotech.webservice.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
@@ -32,6 +26,9 @@ public class TestConfig implements CommandLineRunner {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private OrderItemRepository orderItemRepository;
 
     @Override
     public void run(String... args) throws Exception {
@@ -68,5 +65,12 @@ public class TestConfig implements CommandLineRunner {
         Order o3 = new Order(null, Instant.parse("2019-07-22T15:21:22Z"), OrderStatus.WAITING_PAYMENT, u1);
 
         orderRepository.saveAll(Arrays.asList(o1, o2, o3));
+
+        OrderItem oi1 = new OrderItem(o1, p1, 2, p1.getPrice());
+        OrderItem oi2 = new OrderItem(o1, p3, 1, p3.getPrice());
+        OrderItem oi3 = new OrderItem(o2, p3, 2, p3.getPrice());
+        OrderItem oi4 = new OrderItem(o3, p5, 2, p5.getPrice());
+
+        orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
     }
 }
