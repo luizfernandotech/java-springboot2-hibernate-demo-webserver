@@ -1,4 +1,4 @@
-# java-springboot2-hibernate-demo-webserver
+# java-springboot2-hibernate-demo-webservice-postgres
 
 Web service project with Spring Boot 2 and JPA / Hibernate
 
